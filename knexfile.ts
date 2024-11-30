@@ -1,3 +1,4 @@
+import 'dotenv'
 import { Knex } from 'knex';
 
 const config: Knex.Config = {

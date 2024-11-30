@@ -14,14 +14,30 @@ datasource db {
 }
 
 model Product {
-  id String @id @default (cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id Int @id @default (autoincrement())
+  createdat DateTime @default(now())
+  updatedat DateTime @updatedAt
   type String
   title String
   description String
   published Boolean @default(false)
   
-  @@index([createdAt])
+  @@index([createdat])
   @@map("products")
 }
+
+// CREATE TABLE products
+// (
+//     id serial,
+//     createdat TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+//     updatedat TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+//     type text,
+//     title text NOT NULL,
+//     description text,
+//     published boolean NOT NULL,
+//     PRIMARY KEY (id)
+// );
+
+// INSERT INTO products (type, title, description, published)
+// VALUES
+// ('церковный пошив', 'подрясник', 'черный простой подрясник', false);
