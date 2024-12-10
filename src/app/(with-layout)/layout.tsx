@@ -1,19 +1,7 @@
-import localFont from "next/font/local";
 import "./globals.css";
-import Link from 'next/link';
 import { Providers } from "../../../components/Providers";
-
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Header from "./Header";
+import Footer from "./Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -27,20 +15,12 @@ export default function RootLayout({ children }: Readonly<{
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className='antialiased'
       >
         <Providers>
-          <header>
-            хедер
-            <nav>
-              <Link href='/'>Главная</Link>
-              <Link href='catalog'>Каталог</Link>
-            </nav>
-          </header>
+          <Header />
           {children}
-          <footer>
-            футер
-          </footer>
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,9 +1,9 @@
-import type { AuthOption } from 'next-auth'
 import GoggleProvider from 'next-auth/providers/google'
 import Credentials from 'next-auth/providers/credentials'
 import { env } from 'process';
+import { User } from 'next-auth';
 
-export const authConfig: AuthOptions = {
+export const authConfig = {
   providers: [
     GoggleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -13,11 +13,11 @@ export const authConfig: AuthOptions = {
       credentials: {
         password: { label: 'password', type: 'password', required: true },
       },
-      async authorize(credentials) {
+      async authorize(credentials): Promise<User | null> {
         if (!credentials?.password) return null;
 
         if (credentials?.password === env.ADMIN_PASSWORD) {
-          return { id: 1, name: 'Natalia' };
+          return { id: '1', name: 'Natalia' };
         }
 
         return null
