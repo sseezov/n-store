@@ -1,6 +1,6 @@
 import db from "@/modules/db";
 
-export default async function Admin() {
+export default async function Admin({}) {
   const products = await db.product.findMany()
 
   async function create() {
