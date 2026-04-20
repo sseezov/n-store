@@ -1,0 +1,27 @@
+{
+  "name": "n-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sseezov/n-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sseezov/n-store/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "globals": "^17.4.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.0.3"
+  },
+  "homepage": "https://github.com/sseezov/n-store#readme"
+}
