@@ -1,11 +1,12 @@
-import Main from "./pages/Main";
+import Footer from "./shared/Footer";
+import Header from "./shared/Header";
 
 export default function App() {
   return (
     <div>
-      <header>Хедер</header>
-      <main id="main"></main>
-      <header>Футер</header>
+      <Header/>
+      <main id="main" class="main"></main>
+      <Footer/>
     </div>
   )
 }

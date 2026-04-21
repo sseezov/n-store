@@ -1,17 +1,19 @@
 import App from '../App.jsx'
-import About from '../pages/About.jsx'
-import Catalog from '../pages/Catalog.jsx'
-import Main from '../pages/Main.jsx'
+import AboutPage from '../pages/About/AboutPage.jsx'
+import CatalogPage from '../pages/Catalog/CatalogPage.jsx'
+import MainPage from '../pages/Main/MainPage.jsx'
 import ErrorPage from '../pages/Error.jsx'
 import render from './render.js'
+import ContactsPage from '../pages/Catalog/ContactsPage.jsx'
 
 
 console.log('load')
 
 const routes = [
-  { path: '/', component: Main, parentSelector: '#main' },
-  { path: '/catalog', component: Catalog, parentSelector: '#main' },
-  { path: '/about', component: About, parentSelector: '#main' },
+  { path: '/', component: MainPage, parentSelector: '#main' },
+  { path: '/catalog', component: CatalogPage, parentSelector: '#main' },
+  { path: '/about', component: AboutPage, parentSelector: '#main' },
+  { path: '/contacts', component: ContactsPage, parentSelector: '#main' },
 ]
 
 const navigate = pathname => routes
@@ -42,5 +44,10 @@ document.addEventListener('click', async (event) => {
     mountRoute()
   }
 })
+
+export const redirect = (route) => {
+  history.pushState({}, '', `${route}`)
+  mountRoute()
+}
 
 window.addEventListener('popstate', () => mountRoute())
