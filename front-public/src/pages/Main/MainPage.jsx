@@ -10,7 +10,6 @@ export default function MainPage() {
   ];
   return (
     <div>
-      Главная страница
       <Search />
       <Slider categories={categories} />
     </div>

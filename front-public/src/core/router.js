@@ -4,7 +4,7 @@ import CatalogPage from '../pages/Catalog/CatalogPage.jsx'
 import MainPage from '../pages/Main/MainPage.jsx'
 import ErrorPage from '../pages/Error.jsx'
 import render from './render.js'
-import ContactsPage from '../pages/Catalog/ContactsPage.jsx'
+import ContactsPage from '../pages/Contacts/ContactsPage.jsx'
 
 
 console.log('load')
