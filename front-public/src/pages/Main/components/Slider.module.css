@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.slider {
+  width: 100vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  anchor-name: --my-carousel;
+
+  scroll-marker-group: after;
+}
+
+.slider::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+
+}
+
+.slide:nth-child(even) {
+  background-color: cyan;
+}
+
+.slide::scroll-marker {
+  content: attr(data-accName);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+
+.slide::scroll-marker:target-current {
+  background-color: black;
+}
+
+.slider::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.slider::scroll-button(*):hover,
+.slider::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.slider::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.slider::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.slider::scroll-button(left) {
+  content: "◄" / "Previous";
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top));
+}
+
+.slider::scroll-button(right) {
+  content: "►" / "Next";
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top));
+}
