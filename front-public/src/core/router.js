@@ -5,6 +5,9 @@ import MainPage from '../pages/Main/MainPage.jsx'
 import ErrorPage from '../pages/Error.jsx'
 import render from './render.js'
 import ContactsPage from '../pages/Contacts/ContactsPage.jsx'
+import SizesPage from '../pages/Sizes/SizesPage.jsx'
+import MeasurementsPage from '../pages/Measurements/MeasurementsPage.jsx'
+import CartPage from '../pages/Cart/CartPage.jsx'
 
 
 console.log('load')
@@ -14,6 +17,9 @@ const routes = [
   { path: '/catalog', component: CatalogPage, parentSelector: '#main' },
   { path: '/about', component: AboutPage, parentSelector: '#main' },
   { path: '/contacts', component: ContactsPage, parentSelector: '#main' },
+  { path: '/sizes', component: SizesPage, parentSelector: '#main' },
+  { path: '/measurements', component: MeasurementsPage, parentSelector: '#main' },
+  { path: '/cart', component: CartPage, parentSelector: '#main' },
 ]
 
 const navigate = pathname => routes

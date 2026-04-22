@@ -1,6 +1,5 @@
-// Search.jsx
 import styles from './Search.module.css';
-import { redirect } from "../../../core/router"
+import { redirect } from "../core/router"
 
 export default function Search() {
   const onSubmit = (e) => {

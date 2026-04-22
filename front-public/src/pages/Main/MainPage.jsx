@@ -1,4 +1,4 @@
-import Search from "./components/Search";
+import Search from "../../shared/Search";
 import Slider from "./components/Slider";
 
 export default function MainPage() {

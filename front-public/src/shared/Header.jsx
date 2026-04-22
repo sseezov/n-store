@@ -16,7 +16,7 @@ export default function Header() {
 
         <ul class={styles.rightLinks}>
           <li><a href="/sizes">Таблица размеров</a></li>
-          <li><a href="/measure">Как снять мерки</a></li>
+          <li><a href="/measurements">Как снять мерки</a></li>
           <li><a href="/cart">Корзина</a></li>
         </ul>
       </div>

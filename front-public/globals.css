@@ -65,21 +65,6 @@ a:hover {
   min-height: 70vh;
 }
 
-/* Карточки / секции (для товаров, описаний) */
-.card {
-  background: #ffffff;
-  border: 1px solid #ede3d4;
-  padding: 1.5rem;
-  transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-}
-.card:hover {
-  border-color: #dbb85c;
-  box-shadow: 0 8px 20px rgba(187, 152, 78, 0.08);
-}
-
-
-
 /* Простые вспомогательные классы */
 .container {
   max-width: 1300px;

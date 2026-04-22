@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
 
       <div class={styles.copyright}>
-        © {new Date().getFullYear()} Церковное облачение
+        © {new Date().getFullYear()} Швейно-вышивальная мастерская Виссон
       </div>
     </footer>
   );
