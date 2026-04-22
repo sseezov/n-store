@@ -12,6 +12,8 @@ export default function MainPage() {
     <div>
       <Search />
       <Slider categories={categories} />
+      <h1>Раздел с новинками</h1>
+      <h1>Популярные товары</h1>
     </div>
   )
 }

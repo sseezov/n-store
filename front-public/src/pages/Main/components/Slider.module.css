@@ -7,15 +7,16 @@
 }
 
 .slider {
-  width: 100vw;
-  height: 300px;
+  position: relative; /* добавляем */
+  width: 70vw;
+  height: 450px;
   padding: 20px;
   display: flex;
+  justify-self: center;
   gap: 4vw;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   anchor-name: --my-carousel;
-
   scroll-marker-group: after;
 }
 
@@ -67,6 +68,7 @@
   opacity: 0.7;
   cursor: pointer;
   position: absolute;
+  top: 29%;
   position-anchor: --my-carousel;
 }
 
@@ -86,12 +88,16 @@
 
 .slider::scroll-button(left) {
   content: "◄" / "Previous";
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top));
+  position: absolute;
+  position-anchor: --my-carousel;
+  left: 10%;
+
 }
 
 .slider::scroll-button(right) {
   content: "►" / "Next";
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top));
+  position: absolute;
+  position-anchor: --my-carousel;
+  right: 10%;
+
 }

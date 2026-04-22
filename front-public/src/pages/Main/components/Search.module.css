@@ -1,0 +1,38 @@
+/* Search.module.css */
+.searchForm {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 600px;
+  justify-self: center;
+}
+
+.input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0d4c4;
+  background: #fffdfa;
+  font-family: inherit;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #dbb85c;
+}
+
+.button {
+  padding: 0.7rem 1rem;
+  background: #dbb85c;
+  border: none;
+  color: #1f1b14;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: #c29f4a;
+}
