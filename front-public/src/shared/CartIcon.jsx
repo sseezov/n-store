@@ -1,10 +1,8 @@
-// components/CartIcon/CartIcon.jsx
-import { state } from '../core/state';
 import styles from './CartIcon.module.css';
+import { cart } from '../lib/cart';
 
 export default function CartIcon() {
-  const { cart } = state;
-  const itemCount = cart.items.length
+  const itemCount = cart.getItems().length
   return (
     <div class={styles.cartItem}>
       <a href="/cart" class={styles.cartLink}>

@@ -46,24 +46,6 @@
   font-weight: bold;
 }
 
-.quantity {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.quantity button {
-  width: 30px;
-  height: 30px;
-  background: #fefaf5;
-  border: 1px solid #ede3d4;
-  cursor: pointer;
-}
-
-.quantity button:hover {
-  background: #dbb85c;
-}
-
 .total {
   font-weight: bold;
   min-width: 80px;

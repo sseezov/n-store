@@ -1,6 +1,9 @@
 import { registerClick, registerSubmit } from './handlers'
 
 export function h(tag, props, ...children) {
+  if (tag === 'Fragment') {
+    return children.flat().join(''); 
+  }
   // Регистрируем обработчики
   if (props) {
     if (props['onClick']) {
@@ -30,3 +33,5 @@ export function h(tag, props, ...children) {
 
   return `<${tag} ${attrs}>${childrenStr}</${tag}>`.replace(' >', '>')
 }
+
+export const Fragment = 'Fragment'

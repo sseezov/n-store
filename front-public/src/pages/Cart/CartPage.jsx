@@ -1,12 +1,10 @@
-// pages/Cart/Cart.jsx
-import { state } from '../../core/state';
 import styles from './CartPage.module.css';
+import { cart } from '../../lib/cart';
 
 export default function Cart() {
-  const { cart } = state
-  const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const total = 0
 
-  if (cart.items.length === 0) {
+  if (cart.getItems().length === 0) {
     return (
       <div class={styles.empty}>
         <h2>Корзина пуста</h2>
@@ -20,17 +18,12 @@ export default function Cart() {
       <h3>Корзина</h3>
 
       <div class={styles.itemsList}>
-        {cart.items.map(item => (
+        {cart.getItems().map(item => (
           <div key={item.id} class={styles.item}>
             <img src={item.image} alt={item.title} class={styles.image} />
             <div class={styles.info}>
               <h3>{item.title}</h3>
               <p>{item.price} ₽</p>
-            </div>
-            <div class={styles.quantity}>
-              <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
             </div>
             <div class={styles.total}>
               {item.price * item.quantity} ₽

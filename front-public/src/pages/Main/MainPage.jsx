@@ -9,11 +9,11 @@ export default function MainPage() {
     { id: 4, title: 'Литургические комплекты', image: '/комплект.jpg' },
   ];
   return (
-    <div>
+    <>
       <Search />
       <Slider categories={categories} />
       <h1>Раздел с новинками</h1>
       <h1>Популярные товары</h1>
-    </div>
+    </>
   )
 }
