@@ -1,5 +1,6 @@
 import styles from './CatalogPage.module.css';
 import Search from '../../shared/Search';
+import ProductCard from './components/ProductCard';
 
 export default function CatalogPage() {
   const categories = [
@@ -26,7 +27,7 @@ export default function CatalogPage() {
     { id: 11, title: 'Комплект литургический', price: 120000, image: '/images/комплект1.jpg', categoryId: 6 },
     { id: 12, title: 'Воздух малый', price: 6000, image: '/images/воздух1.jpg', categoryId: 7 }
   ];
-  
+
   return (
     <div class={styles.catalog}>
       <div class={styles.searchWrapper}>
@@ -46,14 +47,7 @@ export default function CatalogPage() {
         </aside>
 
         <div class={styles.productsGrid}>
-          {products.map(product => (
-            <div key={product.id} class={styles.card}>
-              <img src={product.image} alt={product.title} />
-              <h4>{product.title}</h4>
-              <p>{product.price} ₽</p>
-              <button class={styles.button}>Подробнее</button>
-            </div>
-          ))}
+          {products.map(product => <ProductCard product={product} />)}
         </div>
       </div>
     </div>

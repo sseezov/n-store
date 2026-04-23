@@ -7,7 +7,7 @@
 }
 
 .slider {
-  position: relative; /* добавляем */
+  position: relative; 
   width: 70vw;
   height: 450px;
   padding: 20px;
