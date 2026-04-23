@@ -1,0 +1,26 @@
+/* CartIcon.module.css */
+.cartItem {
+  list-style: none;
+}
+
+.cartLink {
+  position: relative;
+  text-decoration: none;
+  color: #2c2418;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: #dbb85c;
+  color: #1f1b14;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

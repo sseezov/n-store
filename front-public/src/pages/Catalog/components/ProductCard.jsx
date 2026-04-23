@@ -2,13 +2,14 @@ import styles from './ProductCard.module.css'
 import { state } from '../../../core/state'
 import render from '../../../core/render';
 import Header from '../../../shared/Header';
+import CartIcon from '../../../shared/CartIcon';
 
 export default function ProductCard({ product }) {
-  const addToCart = (e) => {
+  const addToCart = () => {
     const { cart } = state;
     cart.addItem(product)
     console.log(cart.items);
-    render('#header-container', <Header />)
+    render('#cartIcon', <CartIcon />)
   }
 
   return (

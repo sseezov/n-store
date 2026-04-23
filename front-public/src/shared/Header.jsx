@@ -1,10 +1,9 @@
 // Header.jsx
 import { state } from '../core/state';
+import CartIcon from './CartIcon';
 import styles from './Header.module.css';
 
-export default function Header() {
-  console.log('header rendered');
-  const { cart } = state;
+export default function Header() {  
   return (
     <header class={styles.header}>
       <div class={styles.nav}>
@@ -20,7 +19,7 @@ export default function Header() {
         <ul class={styles.rightLinks}>
           <li><a href="/sizes">Таблица размеров</a></li>
           <li><a href="/measurements">Как снять мерки</a></li>
-          <li><a href="/cart">Корзина: {cart.items.length}</a></li>
+          <li id='cartIcon'><CartIcon/></li>
         </ul>
       </div>
     </header>
