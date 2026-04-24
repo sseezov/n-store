@@ -5,8 +5,9 @@ export default function Slider({ categories }) {
     <ul class={styles.slider}>
       {categories.map((category) => (
         <li class={styles.slide} data-accName={category.id}>
-        <h2>{category.title}</h2>
-      </li>)
+          <h2>{category.title}</h2>
+        </li>
+      )
       )}
     </ul>
   )
