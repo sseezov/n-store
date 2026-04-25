@@ -1,7 +1,7 @@
 import styles from './CartPage.module.css';
 import { cart } from '../../lib/cart';
 
-export default function Cart() {
+export default function CartPage() {
   const total = 0
 
   if (cart.getItems().length === 0) {

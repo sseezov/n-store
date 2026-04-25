@@ -1,5 +1,5 @@
 // Header.jsx
-import { state } from '../core/state';
+import { state } from '../../state.js';
 import CartIcon from './CartIcon';
 import styles from './Header.module.css';
 

@@ -1,8 +1,8 @@
 import styles from './ProductCard.module.css'
-import render from '../../../core/render';
 import Header from '../../../shared/Header';
 import CartIcon from '../../../shared/CartIcon';
 import { cart } from '../../../lib/cart';
+import { render } from '@sseezov/wood-js';
 
 export default function ProductCard({ product }) {
   const addToCart = () => {    

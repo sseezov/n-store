@@ -1,5 +1,5 @@
 import styles from './Search.module.css';
-import { redirect } from "../core/router"
+import { redirect } from '@sseezov/wood-js'
 
 export default function Search() {
   const onSubmit = (e) => {
@@ -13,11 +13,11 @@ export default function Search() {
 
   return (
     <form class={styles.searchForm} onSubmit={onSubmit}>
-      <input 
-        type="text" 
-        name="value" 
+      <input
+        type="text"
+        name="value"
         class={styles.input}
-        placeholder="поиск по каталогу товаров" 
+        placeholder="поиск по каталогу товаров"
       />
       <button type="submit" class={styles.button}>
         поиск
