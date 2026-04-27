@@ -48,6 +48,7 @@
   text-decoration: none;
   font-family: inherit;
   padding: 0;
+  padding-bottom: 5px;
 }
 
 .logoWrapper button {

@@ -26,6 +26,10 @@ export const mountRoute = async () => {
   render(parentSelector, component())
 }
 
+export const navigateBack = () => {
+  history.back()
+}
+
 export const redirect = (route) => {
   history.pushState({}, '', `${route}`)
   mountRoute()

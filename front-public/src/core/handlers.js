@@ -21,7 +21,6 @@ export const registerSubmit = (handler) => {
 }
 
 export function cleanDeadHandlers() {
-  console.log(handlers.click);
   for (const id in handlers.click) {
     const element = document.querySelector(`[data-handler="${id}"]`)
     if (!element) delete handlers.click[id]
@@ -47,7 +46,6 @@ export const initListeners = () => {
       handlers.submit[handler](e)
     }
   }
-
 
   document.addEventListener('click', handleClick)
   document.addEventListener('submit', handleSubmit)

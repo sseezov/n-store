@@ -88,5 +88,5 @@ img {
 }
 
 .activeLink {
-  color: #c29f4a;
+  border-bottom: 2px solid #c29f4a !important;
 }
