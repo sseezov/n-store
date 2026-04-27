@@ -13,7 +13,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@sseezov/wood-js": "^0.2.2",
-    "vite": "^7.3.2"
+    "vite": "^8.0.10"
   }
 }

@@ -13,7 +13,9 @@ export default defineConfig({
   },
   esbuild: {
     jsxFactory: 'h',
-    jsxInject: `import { h, Fragment } from '@sseezov/wood-js'`,
-    jsxFragment: 'Fragment'
+    jsxInject: `import { h, Fragment } from '/src/core/h'`,
+    jsxFragment: 'Fragment',
+    jsx: 'transform',
+    jsxDev: false 
   },
 })

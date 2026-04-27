@@ -1,8 +1,5 @@
 import { state } from '../../state.js'
 
-console.log(state);
-
-
 export const cart = {
   _items: state.cart,
   getItems: function(){

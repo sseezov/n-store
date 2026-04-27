@@ -19,9 +19,12 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "globals": "^17.4.0",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.0.3"
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0"
   },
-  "homepage": "https://github.com/sseezov/n-store#readme"
+  "homepage": "https://github.com/sseezov/n-store#readme",
+  "dependencies": {
+    "vite": "^8.0.10"
+  }
 }

@@ -1,4 +1,4 @@
-import { initWood } from '@sseezov/wood-js'
+import { initWood } from './src/core/initWood.js'
 import App from './src/App'
 import MainPage from './src/pages/Main/MainPage'
 import CatalogPage from './src/pages/Catalog/CatalogPage'
@@ -19,4 +19,4 @@ const routes = [
   { path: '/cart', component: CartPage, parentSelector: '#main' },
 ]
 
-initWood(App, routes, Error)
+initWood(App, routes, { component: Error, parentSelector: '#main' })

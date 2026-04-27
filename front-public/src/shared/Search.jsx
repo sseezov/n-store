@@ -1,5 +1,5 @@
 import styles from './Search.module.css';
-import { redirect } from '@sseezov/wood-js'
+import { redirect } from '../core/index'
 
 export default function Search() {
   const onSubmit = (e) => {

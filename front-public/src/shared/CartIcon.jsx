@@ -1,14 +1,15 @@
 import styles from './CartIcon.module.css';
 import { cart } from '../lib/cart';
+import { redirect } from '../core/router';
 
 export default function CartIcon() {
   const itemCount = cart.getItems().length
   return (
     <div class={styles.cartItem}>
-      <a href="/cart" class={styles.cartLink}>
+      <button onClick={() => redirect('/cart')} class={styles.cartLink}>
         Корзина
         <span class={styles.badge}>{itemCount}</span>
-      </a>
+      </button>
     </div>
   );
 }
