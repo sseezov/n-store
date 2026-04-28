@@ -12,7 +12,16 @@ export default async function CatalogPage() {
   const categoryId = searchParams.get('category')
   const query = searchParams.get('q')
   const filterProducts = () => {
-    
+    if (query) {
+      return products.filter((product) =>
+        product.title.toLowerCase().includes(query.toLowerCase()) ||
+        product.description.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+    if (categoryId) {
+      return products.filter((product) => product.categoryId === +categoryId);
+    }
+    return products;
   }
   const searchProducts = (e) => {
     e.preventDefault();
@@ -31,10 +40,10 @@ export default async function CatalogPage() {
       </div>
 
       <div class={styles.content}>
-        <CategoriesList categories={categories} activeId={categoryId} filterByCategory={filterByCategory}/>
+        <CategoriesList categories={categories} activeId={categoryId} filterByCategory={filterByCategory} />
 
         <div class={styles.productsGrid}>
-          {products.map(product => <ProductCard product={product} />)}
+          {filterProducts(products).map(product => <ProductCard product={product} />)}
         </div>
       </div>
     </div>

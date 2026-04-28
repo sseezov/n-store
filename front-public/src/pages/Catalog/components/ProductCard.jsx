@@ -14,7 +14,8 @@ export default function ProductCard({ product }) {
     <div class={styles.card}>
       <img src={product.image} alt={product.title} />
       <h4>{product.title}</h4>
-      <p>{product.price} ₽</p>
+      <p class={styles.description}>{product.description}</p>
+      <p class={styles.price}>{product.price} ₽</p>
       <button class={styles.button}>Подробнее</button>
       <button class={styles.button}>Добавить в корзину</button>
     </div>
