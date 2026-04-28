@@ -1,3 +1,4 @@
+import styles from './MainPage.module.css'
 import { fetchCategories } from "../../api";
 import { redirect } from "../../core";
 import Search from "../../shared/Search";
@@ -16,7 +17,9 @@ export default async function MainPage() {
 
   return (
     <>
-      <Search handler={redirectToCatalog}/>
+      <div class={styles.searchWrapper}>
+        <Search handler={redirectToCatalog} />
+      </div>
       <Slider categories={categories} />
       <h1>Раздел с новинками</h1>
       <h1>Популярные товары</h1>

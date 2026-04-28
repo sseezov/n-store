@@ -28,7 +28,9 @@ export default function Header() {
         <ul class={styles.rightLinks}>
           <li><button class={pathname === '/sizes' ? 'activeLink' : ''} onClick={(e) => useNav(e, '/sizes')}>Таблица размеров</button></li>
           <li><button class={pathname === '/measurements' ? 'activeLink' : ''} onClick={(e) => useNav(e, '/measurements')}>Как снять мерки</button></li>
-          <li id='cartIcon'><CartIcon handler={(e) => useNav(e, '/cart')}/></li>
+          <li id='cartIcon'>
+            <CartIcon handler={(e) => useNav(e, '/cart')} />
+          </li>
         </ul>
       </div>
     </header>

@@ -1,7 +1,6 @@
 import styles from "./CategoriesList.module.css"
 
 export default function CategoriesList({ categories, activeId, filterByCategory }) {
-  console.log(activeId);
   return (
     <aside class={styles.sidebar}>
       <h3>Категории</h3>

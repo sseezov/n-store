@@ -8,9 +8,9 @@ export default function CartIcon({ handler }) {
 
   return (
     <div class={styles.cartItem}>
-      <button class={pathname === '/cart' ? `activeLink ${styles.cartLink}` : `${styles.cartLink}`} onClick={(e) => handler(e, '/cart')}>
+      <button onClick={handler} class={pathname === '/cart' ? `activeLink ${styles.cartLink}` : `${styles.cartLink}`}>
         Корзина
-        <span class={styles.badge}>{itemCount}</span>
+        <span id="cartItemsCount" class={styles.badge}>{itemCount}</span>
       </button>
     </div>
   );

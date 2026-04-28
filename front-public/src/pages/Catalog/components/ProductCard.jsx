@@ -5,10 +5,10 @@ import { cart } from '../../../lib/cart';
 import { render } from '../../../core/render';
 
 export default function ProductCard({ product }) {
-  // const addToCart = () => {    
-  //   cart.addItem(product)
-  //   render('#cartIcon', <CartIcon />)
-  // }
+  const addToCart = (product) => {
+    cart.addItem(product)
+    render('#cartItemsCount', cart.getItems().length)
+  }
 
   return (
     <div class={styles.card}>
@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
       <p class={styles.description}>{product.description}</p>
       <p class={styles.price}>{product.price} ₽</p>
       <button class={styles.button}>Подробнее</button>
-      <button class={styles.button}>Добавить в корзину</button>
+      <button class={styles.button} onClick={() => addToCart(product)}>Добавить в корзину</button>
     </div>
   )
 }
