@@ -90,3 +90,10 @@ img {
 .activeLink {
   border-bottom: 2px solid #c29f4a !important;
 }
+
+.activeCategory {
+  color: #dbb85c;
+  font-weight: 600;
+  border-left: 3px solid #dbb85c;
+  padding-left: 0.75rem;
+}

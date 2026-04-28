@@ -3,26 +3,25 @@ import Search from '../../shared/Search';
 import ProductCard from './components/ProductCard';
 import { fetchCategories, fetchProducts } from '../../api';
 import { redirect } from '../../core';
+import CategoriesList from './components/CategoriesList';
 
 export default async function CatalogPage() {
   const categories = await fetchCategories()
   const products = await fetchProducts()
   const { searchParams } = new URL(window.location.href)
+  const categoryId = searchParams.get('category')
+  const query = searchParams.get('q')
   const filterProducts = () => {
-    const query = searchParams.get('q')
-    const category = searchParams.get('category')
-    console.log(query, category);
+    
   }
   const searchProducts = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const value = formData.get('value');
-    searchParams.set('q', value)
-    redirect(`${window.location.pathname}?${searchParams.toString()}`);
+    redirect(`/catalog?q=${value}`);
   }
   const filterByCategory = (categoryId) => {
-    searchParams.set('category', categoryId)
-    redirect(`${window.location.pathname}?${searchParams.toString()}`);
+    redirect(`/catalog?category=${categoryId}`);
   }
 
   return (
@@ -32,17 +31,7 @@ export default async function CatalogPage() {
       </div>
 
       <div class={styles.content}>
-        <aside class={styles.sidebar}>
-          <h4>{`Всего ${products.length}`}</h4>
-          <h3>Категории</h3>
-          <ul class={styles.categoriesList}>
-            {categories.map(category => (
-              <li key={category.id}>
-                <button onClick={() => filterByCategory(category.id)}>{category.title}</button>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <CategoriesList categories={categories} activeId={categoryId} filterByCategory={filterByCategory}/>
 
         <div class={styles.productsGrid}>
           {products.map(product => <ProductCard product={product} />)}
