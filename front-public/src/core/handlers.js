@@ -21,7 +21,6 @@ export const registerSubmit = (handler) => {
 }
 
 export function cleanDeadHandlers() {
-  console.log('handlers.click', handlers.click);
   for (const id in handlers.click) {
     const element = document.querySelector(`[data-handler="${id}"]`)
     if (!element) delete handlers.click[id]

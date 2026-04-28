@@ -9,11 +9,9 @@ export default function Header() {
     const navButtons = document.querySelector('#nav').querySelectorAll('button')
     navButtons.forEach(btn => btn.classList.remove('activeLink'))
     e.target.classList.add('activeLink')
-    console.log(navButtons);
     redirect(path)
   }
   const { pathname } = new URL(window.location.href)
-  
 
   return (
     <header class={styles.header}>

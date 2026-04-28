@@ -5,7 +5,6 @@ import { redirect } from '../core/router';
 export default function CartIcon({ handler }) {
   const itemCount = cart.getItems().length
   const { pathname } = new URL(window.location.href)
-  console.log(pathname);
 
   return (
     <div class={styles.cartItem}>

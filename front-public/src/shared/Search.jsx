@@ -1,18 +1,8 @@
 import styles from './Search.module.css';
-import { redirect } from '../core/index'
 
-export default function Search() {
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const value = formData.get('value');
-    if (value.trim()) {
-      redirect(`/catalog?q=${value}`);
-    }
-  }
-
+export default function Search({ handler }) {
   return (
-    <form class={styles.searchForm} onSubmit={onSubmit}>
+    <form class={styles.searchForm} onSubmit={handler}>
       <input
         type="text"
         name="value"
